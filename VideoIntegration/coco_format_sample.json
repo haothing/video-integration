@@ -69,5 +69,5 @@
     },
     {}
   ],
-  "categories": [{'supercategory': 'person', 'id': 1001, 'name': 'person'}]
+  "categories": [{"supercategory": "person", "id": 1001, "name": "person"}]
 }
