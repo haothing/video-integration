@@ -1,0 +1,73 @@
+{
+  "info": {
+    "description": "COCO SUN TEST Dataset",
+    "url": "",
+    "version": "1.0",
+    "year": 2020,
+    "contributor": "SUN JIANJUN",
+    "date_created": "2020/01/10"
+  },
+  "licenses": [
+    {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    }
+  ],
+  "images": [
+    {
+      "license": 1,
+      "file_name": "a_00000001.jpg",
+      "coco_url": "",
+      "height": 360,
+      "width": 640,
+      "date_captured": "2020-01-10 00:00:00",
+      "flickr_url": "",
+      "id": 1
+    },
+    {}
+  ],
+  "annotations": [
+    {
+      "segmentation": [
+        [
+          239.97,
+          260.24,
+          222.04,
+          270.49,
+          199.84,
+          253.41,
+          213.5,
+          227.79,
+          259.62,
+          200.46,
+          274.13,
+          202.17,
+          277.55,
+          210.71,
+          249.37,
+          253.41,
+          237.41,
+          264.51,
+          242.54,
+          261.95,
+          228.87,
+          271.34
+        ]
+      ],
+      "area": 2765,
+      "iscrowd": 0,
+      "image_id": 1,
+      "bbox": [
+        199.84,
+        200.46,
+        77.71,
+        70.88
+      ],
+      "category_id": 1001,
+      "id": 1
+    },
+    {}
+  ],
+  "categories": [{'supercategory': 'person', 'id': 1001, 'name': 'person'}]
+}
