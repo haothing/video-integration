@@ -1,0 +1,5 @@
+##截取视频
+ffmpeg -ss "00:30:40" -t "300" -accurate_seek -i "G:\ProgramData\ast\facefake\001.avi" -codec copy "G:\ProgramData\ast\facefake\001_out.avi"
+
+##视频转换图片
+ffmpeg -i "G:\ProgramData\ast\facefake\001_out.avi" -vf fps=framerate -qscale:v 2 "G:\ProgramData\ast\facefake\image\imagename%04d.jpg"

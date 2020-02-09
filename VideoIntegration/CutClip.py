@@ -72,7 +72,7 @@ def get_end_time(video, offset_t = 0, limit_t = 5, rate = 1):
     for time_index in range(int(video.duration - offset_t), end_time, -1):
     
         # every 2 seconds take a image
-        div = divmod(time_index, 2)
+        div = divmod(time_index, rate)
         if div[1] == 0:
     
             #plt.subplot(10, 1, imageIndex)
@@ -138,7 +138,7 @@ for root, dirs, files in os.walk(path):
             
             # clip the video
             v = VideoFileClip(filePath)
-            v_s, v_e = get_start_time(v, 8), get_end_time(v, 5)
+            v_s, v_e = get_start_time(v, 8), get_end_time(v, 1)
             #v_s = int(cut_times[file][0])
             #v_e = int(cut_times[file][1])
             print('video %s cut duration is: %d, %d' % (filePath, v_s, v_e))
