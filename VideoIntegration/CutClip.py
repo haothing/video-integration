@@ -120,7 +120,7 @@ with open('/mnt/hgfs/shared/data/cut_times.csv') as f:
 '''
 
 L = []
-path = "/mnt/hgfs/shared/data/"
+path = "/mnt/hgfs/ubuntu_ml_shared/3/"
 # loop the file in folder
 for root, dirs, files in os.walk(path):
     
