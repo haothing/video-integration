@@ -6,14 +6,14 @@ setup_logger()
 
 from detectron2.engine import DefaultPredictor
 from detectron2.config import get_cfg
-from detectron2.utils.visualizer import Visualizer
+#from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 
 import os
 import math
 import numpy as np
 import random
-import cv2
+# import cv2
 import datetime
 import detectron2
 import csv
@@ -139,6 +139,7 @@ for root, dirs, files in os.walk(path):
             # clip the video
             v = VideoFileClip(filePath)
             v_s, v_e = get_start_time(v, 8), get_end_time(v, 1)
+            #v_s, v_e = 8, 90
             #v_s = int(cut_times[file][0])
             #v_e = int(cut_times[file][1])
             print('video %s cut duration is: %d, %d' % (filePath, v_s, v_e))
@@ -166,7 +167,7 @@ print('start to concatenate video...')
 # 拼接视频
 final_clip = concatenate_videoclips(L)
 # 生成目标视频文件
-final_clip.write_videofile("/mnt/hgfs/shared/data/target_vr.mp4", bitrate="12000k", remove_temp=False, audio_codec="aac")
+final_clip.write_videofile("./target_vr.mp4", bitrate="12000k", remove_temp=False, audio_codec="aac")
 print('completed!')
 
 endtime = datetime.datetime.now()
