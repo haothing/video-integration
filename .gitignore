@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.history
+.vscode
+notebooks
+data
+checkpoints
 
 # C extensions
 *.so

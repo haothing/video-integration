@@ -8,7 +8,7 @@ import face_recognition
 #known_path = os.path.join("/home/appuser/repositories/video-integration/", "data/known/")
 #unknown_path = os.path.join("/home/appuser/repositories/video-integration/", "data/1/")
 
-known_path = os.path.join("/home/repositories/test-data/", "faces/known/")
+known_path = os.path.join("/home/repositories/test-data/", "faces/known/0/")
 unknown_path = os.path.join("/home/repositories/test-data/", "faces/face_image/0/")
 result_path = os.path.join("/home/repositories/test-data/", "faces/face_result/0/")
 
@@ -61,7 +61,7 @@ for root, dirs, files in os.walk(unknown_path):
       # load file 
       print("file %s is processing." % (filePath))
       unknown_image = face_recognition.load_image_file(filePath)
-      face_locations = face_recognition.face_locations(unknown_image, number_of_times_to_upsample=2)
+      face_locations = face_recognition.face_locations(unknown_image, number_of_times_to_upsample=1)
       face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
 
       # Convert the image to a PIL-format image so that we can draw on top of it with the Pillow library
@@ -71,6 +71,8 @@ for root, dirs, files in os.walk(unknown_path):
 
       # Loop through each face found in the unknown image
       for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+
+        print("--------------- shape: ", np.array(face_encoding).shape)
 
         # See if the face is a match for the known face(s)
         matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance=0.6)
